@@ -4,7 +4,7 @@
  * All rights reserved.
  *
  * "IdentifierGeneratorHelper.java is the copyrighted,
- * proprietary property of Abbcc Company and its
+ * proprietary property of Net355 team and its
  * subsidiaries and affiliates which retain all right, title and interest
  * therein."
  * 

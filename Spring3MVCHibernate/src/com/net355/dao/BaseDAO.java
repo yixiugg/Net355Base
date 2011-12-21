@@ -1,10 +1,10 @@
 /**
- * Copyright (c) 2010 Abbcc Corp.
+ * Copyright (c) 2012 Net355 team.
  * No 225,Wen Yi RD, Hang Zhou, Zhe Jiang, China.
  * All rights reserved.
  *
  * "BaseDAO.java is the copyrighted,
- * proprietary property of Abbcc Company and its
+ * proprietary property of Net355 team and its
  * subsidiaries and affiliates which retain all right, title and interest
  * therein."
  * 
