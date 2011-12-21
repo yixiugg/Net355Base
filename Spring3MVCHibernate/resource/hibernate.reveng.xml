@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="net355" match-name="ad"/>
+  <table-filter match-catalog="net355" match-name="admin"/>
+  <table-filter match-catalog="net355" match-name="attachment"/>
+  <table-filter match-catalog="net355" match-name="brand"/>
+  <table-filter match-catalog="net355" match-name="expense"/>
+  <table-filter match-catalog="net355" match-name="file"/>
+  <table-filter match-catalog="net355" match-name="folder"/>
+  <table-filter match-catalog="net355" match-name="log"/>
+  <table-filter match-catalog="net355" match-name="message"/>
+  <table-filter match-catalog="net355" match-name="module"/>
+  <table-filter match-catalog="net355" match-name="news"/>
+  <table-filter match-catalog="net355" match-name="notice"/>
+  <table-filter match-catalog="net355" match-name="privilege"/>
+  <table-filter match-catalog="net355" match-name="product"/>
+  <table-filter match-catalog="net355" match-name="recharge"/>
+  <table-filter match-catalog="net355" match-name="space"/>
+  <table-filter match-catalog="net355" match-name="syscode"/>
+  <table-filter match-catalog="net355" match-name="user"/>
+  <table-filter match-catalog="net355" match-name="viewlog"/>
+</hibernate-reverse-engineering>
