@@ -16,6 +16,7 @@
  **/
 package com.net355.dao.impl;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
@@ -31,6 +32,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.lucene.analysis.cn.ChineseAnalyzer;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.SortField;
 import org.hibernate.Criteria;
@@ -50,10 +52,13 @@ import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.ibatis.SqlMapClientTemplate;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.wltea.analyzer.lucene.IKAnalyzer;
+import org.wltea.analyzer.lucene.IKQueryParser;
 
 import com.net355.common.PaginationSupport;
 import com.net355.dao.BaseDAO;
 import com.net355.util.BeansFactory;
+import com.net355.util.StringUtil;
 
 
 /**
@@ -549,5 +554,21 @@ public class BaseDAOImpl implements BaseDAO {
 		int sum = Integer.parseInt((String) session.createQuery(sql)
 				.uniqueResult());
 		return sum;
+	}
+	
+	/**
+	 * lucene查询
+	 * @throws IOException 
+	 */
+	public List findByParamsAndIndex(String field, String keyword, Class clazz)
+			throws ParseException, IOException {
+		Session session = this.getHibernateTemplate().getSessionFactory()
+				.getCurrentSession();
+		FullTextSession fullTextSession = Search.getFullTextSession(session);
+		Query query = IKQueryParser.parse(field, keyword); 
+		org.hibernate.Query hibQuery = fullTextSession.createFullTextQuery(
+				query, clazz);
+		List result = hibQuery.list();
+		return result;
 	}
 }

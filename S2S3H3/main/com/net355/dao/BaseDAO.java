@@ -17,6 +17,7 @@
 
 package com.net355.dao;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -97,4 +98,6 @@ public interface BaseDAO {
 	public List findByCriteria(final DetachedCriteria detachedCriteria);
 	
 	public int getStatBySql(String sql);
+	
+	public List findByParamsAndIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
 }
