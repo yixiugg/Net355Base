@@ -41,6 +41,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
+import org.hibernate.search.FullTextQuery;
 import org.hibernate.search.FullTextSession;
 import org.hibernate.search.Search;
 import org.hibernate.transform.ResultTransformer;
@@ -566,9 +567,8 @@ public class BaseDAOImpl implements BaseDAO {
 				.getCurrentSession();
 		FullTextSession fullTextSession = Search.getFullTextSession(session);
 		Query query = IKQueryParser.parse(field, keyword); 
-		org.hibernate.Query hibQuery = fullTextSession.createFullTextQuery(
-				query, clazz);
-		List result = hibQuery.list();
+		FullTextQuery fullTextQuery = fullTextSession.createFullTextQuery(query,clazz); 
+		List result = fullTextQuery.list();
 		return result;
 	}
 }
