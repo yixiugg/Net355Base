@@ -17,6 +17,7 @@
 
 package com.net355.service.impl;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -171,6 +172,12 @@ public class BaseServiceImpl implements BaseService {
 	public int getStatBySql(String sql) {
 		// TODO Auto-generated method stub
 		return baseDAO.getStatBySql(sql);
+	}
+
+	@Override
+	public List findByParamsAndIndex(String field, String keyword, Class clazz)
+			throws ParseException, IOException {
+		return baseDAO.findByParamsAndIndex(field, keyword, clazz);
 	}
 
 }
