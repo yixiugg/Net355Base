@@ -17,6 +17,7 @@
 
 package com.net355.service;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -100,4 +101,6 @@ public interface BaseService {
 			throws Exception;
 
 	public List findByCriteria(DetachedCriteria detachedCriteria);
+	
+	public List findByParamsAndIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
 }
