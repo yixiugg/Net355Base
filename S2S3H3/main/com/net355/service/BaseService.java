@@ -102,5 +102,5 @@ public interface BaseService {
 
 	public List findByCriteria(DetachedCriteria detachedCriteria);
 	
-	public List findByParamsAndIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
+	public List findByParamsFromIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
 }

@@ -99,5 +99,5 @@ public interface BaseDAO {
 	
 	public int getStatBySql(String sql);
 	
-	public List findByParamsAndIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
+	public List findByParamsFromIndex(String field, String keyword, Class clazz)throws ParseException, IOException ;
 }

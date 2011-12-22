@@ -29,12 +29,13 @@ import javax.sql.DataSource;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.lucene.analysis.cn.ChineseAnalyzer;
 import org.apache.lucene.queryParser.MultiFieldQueryParser;
 import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.SortField;
+import org.apache.lucene.util.Version;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -561,12 +562,12 @@ public class BaseDAOImpl implements BaseDAO {
 	 * lucene查询
 	 * @throws IOException 
 	 */
-	public List findByParamsAndIndex(String field, String keyword, Class clazz)
+	public List findByParamsFromIndex(String field, String keyword, Class clazz)
 			throws ParseException, IOException {
 		Session session = this.getHibernateTemplate().getSessionFactory()
 				.getCurrentSession();
 		FullTextSession fullTextSession = Search.getFullTextSession(session);
-		Query query = IKQueryParser.parse(field, keyword); 
+		Query query = new QueryParser(Version.LUCENE_31,field, new IKAnalyzer()).parse(keyword); 
 		FullTextQuery fullTextQuery = fullTextSession.createFullTextQuery(query,clazz); 
 		List result = fullTextQuery.list();
 		return result;

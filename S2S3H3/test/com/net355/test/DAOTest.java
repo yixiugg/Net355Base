@@ -11,12 +11,14 @@ import com.net355.util.BeansFactory;
 
 public class DAOTest {
 	public static void main(String[] args) throws ParseException, IOException{
+		BaseService baseService = (BaseService)BeansFactory.get("baseService");
+		
 //		Admin admin = new Admin();
 //		admin.setAdminAcc("net355admin");
 //		admin.setAdminName("This is my 中文！");
 //		admin.setAdminEmail("test@china.com");
-		BaseService baseService = (BaseService)BeansFactory.get("baseService");
-		List admins = baseService.findByParamsAndIndex("adminName", "This", Admin.class);
+//		baseService.save(admin);
+		List admins = baseService.findByParamsFromIndex("adminName", "This", Admin.class);
 		for(Object admin : admins){
 			System.out.println(admin);
 		}

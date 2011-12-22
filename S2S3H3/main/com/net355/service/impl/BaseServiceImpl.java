@@ -175,9 +175,9 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	@Override
-	public List findByParamsAndIndex(String field, String keyword, Class clazz)
+	public List findByParamsFromIndex(String field, String keyword, Class clazz)
 			throws ParseException, IOException {
-		return baseDAO.findByParamsAndIndex(field, keyword, clazz);
+		return baseDAO.findByParamsFromIndex(field, keyword, clazz);
 	}
 
 }
