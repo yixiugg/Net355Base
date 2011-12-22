@@ -1,0 +1,260 @@
+12/22/11 12:20:42 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1050169: startup date [Thu Dec 22 12:20:42 CST 2011]; root of context hierarchy
+12/22/11 12:20:42 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:20:44 PM  INFO  com.net355.util.BeansFactory <clinit> - Spring load error 
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 89 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException: The element type "beans" must be terminated by the matching end-tag "</beans>".
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:396)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:143)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:178)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:149)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:212)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:126)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:92)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:467)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:397)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.net355.util.BeansFactory.<clinit>(BeansFactory.java:40)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+Caused by: org.xml.sax.SAXParseException: The element type "beans" must be terminated by the matching end-tag "</beans>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:195)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:174)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:388)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1414)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1749)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2938)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:648)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:140)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:808)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:737)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:119)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:235)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:284)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:75)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:388)
+	... 15 more
+12/22/11 12:20:44 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:71)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:21:22 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2a340e: startup date [Thu Dec 22 12:21:22 CST 2011]; root of context hierarchy
+12/22/11 12:21:22 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:21:23 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:21:24 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21b220: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:21:24 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:21:27 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:21:29 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:21:30 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krqw5tw8y61w1|ad8659, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krqw5tw8y61w1|ad8659, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:21:33 PM  ERROR org.mybatis.spring.mapper.MapperFactoryBean checkDaoConfig - Error while adding the mapper 'interface com.net355.mapper.UserMapper' to configuration.
+java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:114)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:89)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:135)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:108)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:60)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:511)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:94)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.net355.util.BeansFactory.<clinit>(BeansFactory.java:40)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:54)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:106)
+	... 22 more
+12/22/11 12:21:33 PM  INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21b220: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:21:33 PM  INFO  org.springframework.orm.hibernate3.AbstractSessionFactoryBean destroy - Closing Hibernate SessionFactory
+12/22/11 12:21:33 PM  INFO  com.net355.util.BeansFactory <clinit> - Spring load error 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [C:\Documents and Settings\E511125\git\statestreet\Spring3MVCHibernate\Spring3MVCHibernate\build\classes\com\net355\mapper\UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.net355.util.BeansFactory.<clinit>(BeansFactory.java:40)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+Caused by: java.lang.IllegalArgumentException: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:97)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 13 more
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:114)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:89)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:135)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:108)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:60)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:511)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:94)
+	... 16 more
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'org.hyn.maper.UserMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:54)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:106)
+	... 22 more
+12/22/11 12:21:33 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:71)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:21:55 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@84abc9: startup date [Thu Dec 22 12:21:55 CST 2011]; root of context hierarchy
+12/22/11 12:21:55 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:21:56 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:21:56 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3570b0: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:21:56 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:21:56 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:21:57 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:21:57 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krqwuis10l9pew|df1832, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krqwuis10l9pew|df1832, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:21:58 PM  ERROR org.mybatis.spring.mapper.MapperFactoryBean checkDaoConfig - Error while adding the mapper 'interface com.net355.mapper.UserMapper' to configuration.
+java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:114)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:89)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:135)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:108)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:60)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:511)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:94)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.net355.util.BeansFactory.<clinit>(BeansFactory.java:40)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:54)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:106)
+	... 22 more
+12/22/11 12:21:58 PM  INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3570b0: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:21:58 PM  INFO  org.springframework.orm.hibernate3.AbstractSessionFactoryBean destroy - Closing Hibernate SessionFactory
+12/22/11 12:21:58 PM  INFO  com.net355.util.BeansFactory <clinit> - Spring load error 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [C:\Documents and Settings\E511125\git\statestreet\Spring3MVCHibernate\Spring3MVCHibernate\build\classes\com\net355\mapper\UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.net355.util.BeansFactory.<clinit>(BeansFactory.java:40)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+Caused by: java.lang.IllegalArgumentException: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:97)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 13 more
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:114)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:89)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:135)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:108)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:60)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:511)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:94)
+	... 16 more
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.net355.mapper.UserMapper' but found 'com.net355.mapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:54)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:106)
+	... 22 more
+12/22/11 12:21:58 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:71)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:22:24 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2a340e: startup date [Thu Dec 22 12:22:24 CST 2011]; root of context hierarchy
+12/22/11 12:22:24 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:22:24 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:22:24 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c74f37: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:22:24 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:22:25 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:22:25 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:22:25 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krqxggp7lqagq|1a116c9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krqxggp7lqagq|1a116c9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:22:27 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:71)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:30:06 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@bfbdb0: startup date [Thu Dec 22 12:30:06 CST 2011]; root of context hierarchy
+12/22/11 12:30:06 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:30:08 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:30:08 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3570b0: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:30:08 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:30:09 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:30:12 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:30:12 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krr7egq17w172y|193c0cf, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krr7egq17w172y|193c0cf, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:34:40 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@bfbdb0: startup date [Thu Dec 22 12:34:40 CST 2011]; root of context hierarchy
+12/22/11 12:34:40 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:34:40 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:34:41 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21b220: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:34:41 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:34:41 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:34:42 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:34:42 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krrd8it1unqwcm|1a116c9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krrd8it1unqwcm|1a116c9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:34:43 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final void $Proxy18.insertUser(com.net355.models.User)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:34:43 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final com.net355.models.User $Proxy18.getUser(java.lang.String)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:34:43 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final boolean $Proxy18.equals(java.lang.Object)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:34:43 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final java.lang.String $Proxy18.toString()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:34:43 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final int $Proxy18.hashCode()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:34:43 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:95)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:35:05 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@bfbdb0: startup date [Thu Dec 22 12:35:05 CST 2011]; root of context hierarchy
+12/22/11 12:35:05 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:35:05 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:35:05 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@79717e: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:35:06 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:35:06 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:35:07 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:35:07 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krrdrri134kvtl|ad8659, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krrdrri134kvtl|ad8659, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+12/22/11 12:35:08 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final void $Proxy18.insertUser(com.net355.models.User)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:35:08 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final com.net355.models.User $Proxy18.getUser(java.lang.String)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:35:08 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final boolean $Proxy18.equals(java.lang.Object)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:35:08 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final java.lang.String $Proxy18.toString()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:35:08 PM  WARN  org.springframework.aop.framework.Cglib2AopProxy doValidateClass - Unable to proxy method [public final int $Proxy18.hashCode()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+12/22/11 12:35:08 PM  INFO  com.net355.util.BeansFactory get - Get bean error, Spring bean name is com.net355.mapper.UserMapper
+java.lang.NullPointerException
+	at com.net355.util.BeansFactory.get(BeansFactory.java:95)
+	at com.net355.test.MapperTest.main(MapperTest.java:11)
+12/22/11 12:35:12 PM  INFO  org.springframework.context.support.AbstractApplicationContext prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2a340e: startup date [Thu Dec 22 12:35:12 CST 2011]; root of context hierarchy
+12/22/11 12:35:12 PM  INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions - Loading XML bean definitions from class path resource [applicationContext.xml]
+12/22/11 12:35:13 PM  INFO  org.springframework.core.io.support.PropertiesLoaderSupport loadProperties - Loading properties file from class path resource [conf.properties]
+12/22/11 12:35:13 PM  INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21b220: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,txAdvice,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,baseDAO,baseService,userMapper,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+12/22/11 12:35:13 PM  INFO  com.mchange.v2.log.MLog <clinit> - MLog clients using log4j logging.
+12/22/11 12:35:13 PM  INFO  com.mchange.v2.c3p0.C3P0Registry banner - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+12/22/11 12:35:14 PM  INFO  org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory - Building new Hibernate SessionFactory
+12/22/11 12:35:14 PM  INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31knlq8krrdxh81kasag|df1832, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31knlq8krrdxh81kasag|df1832, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost/net355, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
