@@ -85,11 +85,7 @@
 	</tx:advice>
 	
 	<!-- baseDAO -->
-	<bean id="baseDAO" class="com.net355.dao.impl.BaseDAOImpl" >
-	<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-		</bean>
+	<bean id="baseDAO" class="com.net355.dao.impl.BaseDAOImpl"/>
 	<!-- baseService -->
 	<bean id="baseService" class="com.net355.service.impl.BaseServiceImpl" />
 
