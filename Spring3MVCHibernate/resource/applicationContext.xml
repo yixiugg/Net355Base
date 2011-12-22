@@ -84,9 +84,15 @@
 		</tx:attributes>
 	</tx:advice>
 	
+	<!-- mybatis -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"/>  
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
+	    <property name="basePackage" value="com.net355.mapper" />  
+	</bean>  
+	
 	<!-- baseDAO -->
 	<bean id="baseDAO" class="com.net355.dao.impl.BaseDAOImpl"/>
 	<!-- baseService -->
 	<bean id="baseService" class="com.net355.service.impl.BaseServiceImpl" />
-
+	
 </beans>

@@ -80,5 +80,29 @@ public class BeansFactory {
 		return o;
 
 	}
+	
+	/**
+	 * @param name
+	 * @return
+	 */
+	public static Object get(Class cls) {
+		Object o = null;
+		try {
+			// o = factory.getBean(name);
+			try {
+				o = getApplicationContext().getBean(cls);
+			} catch (Exception e) {
+				o = factory.getBean(cls);
+				System.out.println("object2:" + o);
+			}
+
+		} catch (Exception e) {
+			System.out.println("bean name is " + cls.getName());
+			e.printStackTrace();
+			log.info("Get bean error, Spring bean name is " +  cls.getName(), e);
+		}
+		return o;
+
+	}
 
 }
