@@ -18,7 +18,7 @@ public class DAOTest {
 //		admin.setAdminName("This is my 中文！");
 //		admin.setAdminEmail("test@china.com");
 //		baseService.save(admin);
-		List admins = baseService.findByParamsFromIndex("adminName", "This", Admin.class);
+		List admins = baseService.findByParamsFromIndex("adminName", "my", Admin.class);
 		for(Object admin : admins){
 			System.out.println(admin);
 		}
